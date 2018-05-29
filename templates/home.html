@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Price Check</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+	<div class="fluid-container inline">
+		<div class="row">
+			<div class="col col-xs-1">
+		 	</div>
+			<div class="col col-xs-10">
+		    	<h1>Price Check</h1>
+		 	</div>
+		 	<div class="col col-xs-1">
+		    	<form action="/wishlist">
+    		 		<button class="btn btn-info btn-lg" style="float: right;">Wish List</button>
+				</form>
+		 	</div>
+	 	</div>
+ 	</div>
+
+	
+
+    <div>
+		<h2>Enter a Product Name:</h2><br>
+		<form action="/search" method="POST">
+	    	<input class="form-control" type="text" name="productName" placeholder="Enter Product Name" required ><br>	
+	    	<div class="text-center">
+	    		<button id="getPrices" class="btn btn-primary btn-lg">Get Prices!</button>
+	    	</div>
+    	</form>
+	</div>
+
+  <main>
+	  <section>
+	      <ul>
+	          <li style="display:inline; "><img style="width:10%; height:10em; display:inline;" src="../static/walmartLogo.jpg" alt="Walmart Logo" /></li>
+	          <li style="display:inline;"><img style="width:10%; height:10em; display:inline;" src="../static/targetLogo.jpg" alt="Target Logo" /></li>
+	          <li style="display:inline;"><img style="width:10%; height:10em; display:inline;" src="../static/amazonLogo.jpg" alt="Amazon Logo"/></li>
+	      </ul>
+	  </section>
+	</main>
+	
+	<div class="fluid-container inline">
+		<div class="row">
+			<div class="col col-xs-4">
+		    	<img class="logo" src="{{walmartInfo.image}}" />
+		    	<p class="logo-info">{{walmartInfo.name}}<br>{{walmartInfo.price}}<br><a href="{{walmartInfo.url}}" target="_blank">{{walmartInfo.url}}</a></p>
+		 	</div>
+		 	<div class="col col-xs-4">
+		    	<img class="logo" src="{{targetInfo.image}}" />
+		    	<p class="logo-info">{{targetInfo.name}}<br>{{targetInfo.price}}<br><a href="{{targetInfo.url}}" target="_blank">{{targetInfo.url}}</a></p>
+		 	</div>
+		 	<div class="col col-xs-4">
+		    	<img class="logo" src="{{amazonInfo.image}}" />
+		    	<p class="logo-info">{{amazonInfo.name}}<br>{{amazonInfo.price}}<br><a href="{{amazonInfo.url}}" target="_blank">{{amazonInfo.url}}</a></p>
+		  	</div>
+		</div>	
+	</div>  
+
+	<div class="row">
+		<div class="col col-xs-4" style="text-align: center;">
+			<form method="POST" action="/add">
+	    		 <button name="walWish" class="btn btn-info btn-lg" value="{{walmartInfo}}">Add to Wishlist!</button>
+    		</form>
+    	</div>
+    	<div class="col col-xs-4" style="text-align: center;">
+			<form method="POST" action="/add">
+	    		<button name="targWish" class="btn btn-info btn-lg" value="{{targetInfo}}">Add to Wishlist!</button>
+    		</form>
+    	</div>
+    	<div class="col col-xs-4" style="text-align: center;" >
+			<form method="POST" action="/add">
+	    		<button name="amWish" class="btn btn-info btn-lg" value="{{amazonInfo}}">Add to Wishlist!</button>
+    		</form>
+    	</div>
+	</div>
+</html>
