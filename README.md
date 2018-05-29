@@ -6,4 +6,4 @@
   - Price
   - Image
   - URL
-- The web app can be viewed here: tg1632.pythonanywhere.com
+- The web app can be viewed here: [http://tg1632.pythonanywhere.com](http://tg1632.pythonanywhere.com/)
