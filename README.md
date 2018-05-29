@@ -6,4 +6,4 @@
   - Price
   - Image
   - URL
-- The web app can be viewed here: <a href="../../../tg1632.pythonanywhere.com">tg1632.pythonanywhere.com</a>
+- The web app can be viewed here: <a href="../../../../../../../tg1632.pythonanywhere.com">tg1632.pythonanywhere.com</a>
