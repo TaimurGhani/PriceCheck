@@ -5,5 +5,6 @@
   - Name
   - Price
   - Image
-  - Url
-- [The web app can be viewed here:] <tg1632.pythonanywhere.com>
+  - URL
+- [The web app can be viewed here:] tg1632.pythonanywhere.com 
+
