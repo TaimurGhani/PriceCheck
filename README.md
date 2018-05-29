@@ -6,5 +6,5 @@
   - Price
   - Image
   - URL
-- The web app can be viewed here: [](tg1632.pythonanywhere.com) 
+- The web app can be viewed here: [asdf](tg1632.pythonanywhere.com) 
 
